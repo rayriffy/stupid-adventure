@@ -18,6 +18,11 @@ export const villageEntry: Dialog = {
       id: 'VswT8gLLBLO4bV-4-Ukuz',
       choice: 'bcuf-nh6xS3gryBH7RNjE',
     },
+    // tavern
+    {
+      id: 'g-FM4Q3ZRXeb4pjvSA04Y',
+      choice: 'jdiqXgh6ysErEJWEXuIKF'
+    },
   ],
   text: 'You have arrived at the village, where do you want to go next?',
   options: [
