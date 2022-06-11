@@ -17,6 +17,10 @@ export const villageHouse: Dialog[] = [
       {
         id: 'oVlLCY7Ov8aXGDBCuPgSG',
         text: 'Rob him'
+      },
+      {
+        id: 'pnw2V3IaePc_-9GMQY-B8',
+        text: 'Back to the village'
       }
     ]
   },
