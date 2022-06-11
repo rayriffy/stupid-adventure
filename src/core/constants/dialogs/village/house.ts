@@ -11,7 +11,7 @@ export const villageHouse: Dialog[] = [
     ],
     text: [
       'You entered the house',
-      'There\'s an old man sitting inside the house, and he has a tavern badge'
+      'There\'s an old man sitting inside the house, and he has a **tavern badge**'
     ],
     options: [
       {
@@ -31,7 +31,7 @@ export const villageHouse: Dialog[] = [
     ],
     text: [
       'You used your gun to steal his badge.',
-      'It worked! Taven badge has been added to your inventory.'
+      'It worked! **Taven badge** has been added to your inventory.'
     ],
     inventorySet: {
       'WVLUnJDD0Nn30Brs23yP-': true
