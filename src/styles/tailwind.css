@@ -4,7 +4,7 @@
 
 html,
 body,
-#__next {
+#root {
   height: 100%;
 }
 
@@ -22,4 +22,24 @@ h6 {
 
 .touch-manipulation {
   touch-action: manipulation;
+}
+
+a {
+  @apply font-medium text-blue-500;
+}
+
+code {
+  @apply text-sm text-white bg-gray-900 rounded-md px-2 py-1 mx-0.5
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

@@ -4,7 +4,7 @@ export const R = createMemo(() => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 370.1 512"
-    className="h-8 w-auto fill-gray-700 dark:fill-white"
+    class="h-8 w-auto fill-gray-700 dark:fill-white"
   >
     <path
       fill="#4b6fff"

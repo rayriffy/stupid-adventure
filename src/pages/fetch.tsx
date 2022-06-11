@@ -10,8 +10,8 @@ const Page: Component = () => {
 
   return (
     <>
-      <h1 className="text-2xl font-bold text-gray-900">Blogs</h1>
-      <div className="mt-4 space-y-4">
+      <h1 class="text-2xl font-bold text-gray-900">Blogs</h1>
+      <div class="mt-4 space-y-4">
         <For
           each={data()?.blogs}
           fallback={
@@ -19,10 +19,10 @@ const Page: Component = () => {
           }
         >
           {blog => (
-            <div className="bg-white border shadow rounded-lg overflow-hidden">
-              <img className="w-full h-auto" src={blog.image} />
-              <div className="px-5 py-4">
-                <h1 className="text-xl font-semibold">{blog.name}</h1>
+            <div class="bg-white border shadow rounded-lg overflow-hidden">
+              <img class="w-full h-auto" src={blog.image} />
+              <div class="px-5 py-4">
+                <h1 class="text-xl font-semibold">{blog.name}</h1>
               </div>
             </div>
           )}

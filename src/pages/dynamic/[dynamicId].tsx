@@ -9,9 +9,9 @@ const Page: Component = () => {
   useTitle('Dynamic route')
 
   return (
-    <div className="space-y-2">
-      <p className="text-gray-700">dynamicId from useParams: {dynamicId}</p>
-      <p className="text-gray-700">data results: {data()}</p>
+    <div class="space-y-2">
+      <p class="text-gray-700">dynamicId from useParams: {dynamicId}</p>
+      <p class="text-gray-700">data results: {data()}</p>
     </div>
   )
 }
