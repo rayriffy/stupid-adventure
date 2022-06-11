@@ -20,7 +20,7 @@ specifiers:
   solid-heroicons: ^2.0.3
   solid-js: ^1.4.3
   tailwindcss: ^3.0.24
-  vite: ^2.9.9
+  vite: 2.8.6
   vite-plugin-html: ^3.2.0
   vite-plugin-pwa: ^0.12.0
   vite-plugin-radar: ^0.4.2
@@ -49,10 +49,10 @@ devDependencies:
   prettier: 2.6.2
   sharp: 0.30.6
   tailwindcss: 3.0.24
-  vite: 2.9.9
-  vite-plugin-html: 3.2.0_vite@2.9.9
-  vite-plugin-pwa: 0.12.0_vite@2.9.9
-  vite-plugin-radar: 0.4.2_vite@2.9.9
+  vite: 2.8.6
+  vite-plugin-html: 3.2.0_vite@2.8.6
+  vite-plugin-pwa: 0.12.0_vite@2.8.6
+  vite-plugin-radar: 0.4.2_vite@2.8.6
   vite-plugin-solid: 2.2.6
   workbox-window: 6.5.3
 
@@ -4257,7 +4257,7 @@ packages:
       vfile-message: 2.0.4
     dev: false
 
-  /vite-plugin-html/3.2.0_vite@2.9.9:
+  /vite-plugin-html/3.2.0_vite@2.8.6:
     resolution: {integrity: sha512-2VLCeDiHmV/BqqNn5h2V+4280KRgQzCFN47cst3WiNK848klESPQnzuC3okH5XHtgwHH/6s1Ho/YV6yIO0pgoQ==}
     peerDependencies:
       vite: '>=2.0.0'
@@ -4274,10 +4274,10 @@ packages:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.3.3
       pathe: 0.2.0
-      vite: 2.9.9
+      vite: 2.8.6
     dev: true
 
-  /vite-plugin-pwa/0.12.0_vite@2.9.9:
+  /vite-plugin-pwa/0.12.0_vite@2.8.6:
     resolution: {integrity: sha512-KYD+cnS5ExLF3T28NkfzBLZ53ehHlp+qMhHGFNh0zlVGpFHrJkL2v9wd4AMi7ZkBTffgeNatIFiv8rhCsMSxBQ==}
     peerDependencies:
       vite: ^2.0.0
@@ -4286,7 +4286,7 @@ packages:
       fast-glob: 3.2.11
       pretty-bytes: 6.0.0
       rollup: 2.71.1
-      vite: 2.9.9
+      vite: 2.8.6
       workbox-build: 6.5.3
       workbox-window: 6.5.3
     transitivePeerDependencies:
@@ -4294,12 +4294,12 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-radar/0.4.2_vite@2.9.9:
+  /vite-plugin-radar/0.4.2_vite@2.8.6:
     resolution: {integrity: sha512-da1mm6nF47PAQyxaMQ7GQgLSgznR1uWnbz7J3mPHHSV9HUMx1ngn4MCB8Jppt/Xmdk99xA6s9z1m4+wJvPrvMQ==}
     peerDependencies:
       vite: ^2.0.0
     dependencies:
-      vite: 2.9.9
+      vite: 2.8.6
     dev: true
 
   /vite-plugin-solid/2.2.6:
@@ -4317,6 +4317,30 @@ packages:
       - sass
       - stylus
       - supports-color
+    dev: true
+
+  /vite/2.8.6:
+    resolution: {integrity: sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==}
+    engines: {node: '>=12.2.0'}
+    hasBin: true
+    peerDependencies:
+      less: '*'
+      sass: '*'
+      stylus: '*'
+    peerDependenciesMeta:
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+    dependencies:
+      esbuild: 0.14.42
+      postcss: 8.4.14
+      resolve: 1.22.0
+      rollup: 2.75.5
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /vite/2.9.9:
