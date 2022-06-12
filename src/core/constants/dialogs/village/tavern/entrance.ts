@@ -1,4 +1,4 @@
-import { Dialog } from "../../../../@types/Dialog";
+import { Dialog } from '../../../../@types/Dialog'
 
 export const tavernEntrance: Dialog[] = [
   {
@@ -6,7 +6,7 @@ export const tavernEntrance: Dialog[] = [
     entries: [
       {
         id: 'flgrzMogBIEokRIENsgyc',
-        choice: 'QRo4dO-DM5V3dx4iDlUmL'
+        choice: 'QRo4dO-DM5V3dx4iDlUmL',
       },
     ],
     text: 'You enter a tavern, the manager asked for an entry pass.',
@@ -14,7 +14,7 @@ export const tavernEntrance: Dialog[] = [
       {
         id: '0CHxX2qmRzcYOf4IPnFOb',
         text: 'Show him a badge',
-        hidden: inventory => inventory?.["WVLUnJDD0Nn30Brs23yP-"] === true,
+        hidden: inventory => inventory?.['WVLUnJDD0Nn30Brs23yP-'] === true,
       },
       {
         id: 'mcm73R5QzchpvsQbtP9kz',
@@ -26,46 +26,46 @@ export const tavernEntrance: Dialog[] = [
       },
       {
         id: 'l62WHGUnaSOLzEWdLEDPW',
-        text: 'Bribe (Back to the village)'
-      }
-    ]
+        text: 'Bribe (Back to the village)',
+      },
+    ],
   },
   {
     id: '2dy7QZ7RD374T6jbvZQVz',
     entries: [
       {
         id: '_ZZEMq-qHt04dDpaeVLus',
-        choice: 'mcm73R5QzchpvsQbtP9kz'
+        choice: 'mcm73R5QzchpvsQbtP9kz',
       },
     ],
     text: 'You were beaten to death',
-    ending: 'C'
+    ending: 'C',
   },
   {
     id: 'zLSydxR51-9lVMn8xD0_W',
     entries: [
       {
         id: '_ZZEMq-qHt04dDpaeVLus',
-        choice: 'QevrTkBEU8yV9mV3E3xdB'
+        choice: 'QevrTkBEU8yV9mV3E3xdB',
       },
     ],
-    text: 'God seen you\'re abusing, forcing you to end the game',
-    ending: 'D'
+    text: "God seen you're abusing, forcing you to end the game",
+    ending: 'D',
   },
   {
     id: 'g-FM4Q3ZRXeb4pjvSA04Y',
     entries: [
       {
         id: '_ZZEMq-qHt04dDpaeVLus',
-        choice: 'l62WHGUnaSOLzEWdLEDPW'
-      }
+        choice: 'l62WHGUnaSOLzEWdLEDPW',
+      },
     ],
     text: '*"Haha, nice try"* said the manager, and you got kicked out of the tavern',
     options: [
       {
         id: 'jdiqXgh6ysErEJWEXuIKF',
-        text: 'Aw mannn'
-      }
-    ]
-  }
+        text: 'Aw mannn',
+      },
+    ],
+  },
 ]

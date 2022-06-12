@@ -23,8 +23,16 @@ export const ChoiceRenderer: Component<Props> = props => {
         </div>
       ) : dialog().ending !== undefined ? (
         <div class="h-full flex flex-col items-center justify-center space-y-2">
-          <p>You reached ending <b>{dialog().ending}</b></p>
-          <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" onClick={restart}>Restart</button>
+          <p>
+            You reached ending <b>{dialog().ending}</b>
+          </p>
+          <button
+            type="button"
+            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            onClick={restart}
+          >
+            Restart
+          </button>
         </div>
       ) : (
         <div class="flex flex-col space-y-2">
@@ -32,7 +40,9 @@ export const ChoiceRenderer: Component<Props> = props => {
             {option => (
               <button
                 class={classNames(
-                  process() ? 'cursor-wait bg-blue-400 hover:bg-blue-500' : 'bg-blue-600 hover:bg-blue-700',
+                  process()
+                    ? 'cursor-wait bg-blue-400 hover:bg-blue-500'
+                    : 'bg-blue-600 hover:bg-blue-700',
                   'inline-flex justify-center items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition'
                 )}
                 onClick={() => onOption(dialog().id, option)}

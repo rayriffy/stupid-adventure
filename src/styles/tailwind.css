@@ -29,7 +29,7 @@ a {
 }
 
 code {
-  @apply text-sm text-white bg-gray-900 rounded-md px-2 py-1 mx-0.5
+  @apply text-sm text-white bg-gray-900 rounded-md px-2 py-1 mx-0.5;
 }
 
 @layer utilities {

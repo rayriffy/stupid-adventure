@@ -1,4 +1,4 @@
-import { Inventory } from "./Inventory"
+import { Inventory } from './Inventory'
 
 export interface Option {
   id: string

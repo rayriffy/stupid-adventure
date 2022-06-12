@@ -1,4 +1,4 @@
-import { Dialog } from "../../../@types/Dialog";
+import { Dialog } from '../../../@types/Dialog'
 
 export const villageEntry: Dialog = {
   id: 'flgrzMogBIEokRIENsgyc',
@@ -25,22 +25,22 @@ export const villageEntry: Dialog = {
     // tavern
     {
       id: 'g-FM4Q3ZRXeb4pjvSA04Y',
-      choice: 'jdiqXgh6ysErEJWEXuIKF'
+      choice: 'jdiqXgh6ysErEJWEXuIKF',
     },
   ],
   text: 'You have arrived at the village, where do you want to go next?',
   options: [
     {
       id: 'B59xJ0nLQpLPnUu24FfXn',
-      text: 'Old-man house'
+      text: 'Old-man house',
     },
     {
       id: 'nx7lC_CHqNsw3-klbO5N3',
-      text: 'Dungeon'
+      text: 'Dungeon',
     },
     {
       id: 'QRo4dO-DM5V3dx4iDlUmL',
-      text: 'Tavern'
+      text: 'Tavern',
     },
-  ]
+  ],
 }

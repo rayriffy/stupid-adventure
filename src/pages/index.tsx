@@ -6,9 +6,7 @@ import { GamePlayer } from '../modules/player/components'
 const Page: Component = () => {
   useTitle('Home')
 
-  return (
-    <GamePlayer />
-  )
+  return <GamePlayer />
 }
 
 export default Page

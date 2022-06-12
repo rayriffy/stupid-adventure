@@ -21,7 +21,8 @@ export default defineConfig({
       manifest: {
         name: 'Stupid Adventure',
         short_name: 'Stupid Adventure',
-        description: 'A stupid adventure game for the Stupid Hackathon Thailand #๖',
+        description:
+          'A stupid adventure game for the Stupid Hackathon Thailand #๖',
         categories: ['game'],
         theme_color: '#fff',
         background_color: '#fff',

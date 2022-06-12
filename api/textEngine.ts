@@ -38,16 +38,26 @@ const api: VercelApiHandler = async (req, res) => {
     })
 
     if (targetDialog) {
-      const serializedDialogText = typeof targetDialog.text === 'string' ? await renderText(targetDialog.text) : await Promise.all(targetDialog.text.map(o => renderText(o)))
-      const serializedDialogOption = targetDialog.options === undefined ? undefined : await Promise.all(targetDialog.options.filter(option =>
-        option.hidden === undefined
-          ? true
-          : option.hidden(payload.inventory)
-      )
-      .map(option => omit(option, ['hidden'])).map(async option => ({
-        id: option.id,
-        text: await renderText(option.text)
-      })))
+      const serializedDialogText =
+        typeof targetDialog.text === 'string'
+          ? await renderText(targetDialog.text)
+          : await Promise.all(targetDialog.text.map(o => renderText(o)))
+      const serializedDialogOption =
+        targetDialog.options === undefined
+          ? undefined
+          : await Promise.all(
+              targetDialog.options
+                .filter(option =>
+                  option.hidden === undefined
+                    ? true
+                    : option.hidden(payload.inventory)
+                )
+                .map(option => omit(option, ['hidden']))
+                .map(async option => ({
+                  id: option.id,
+                  text: await renderText(option.text),
+                }))
+            )
 
       let serializedDialog: SerializedDialog = {
         ...omit(targetDialog, ['entries']),

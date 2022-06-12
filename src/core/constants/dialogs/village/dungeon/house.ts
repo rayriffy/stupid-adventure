@@ -1,4 +1,4 @@
-import { Dialog } from "../../../../@types/Dialog";
+import { Dialog } from '../../../../@types/Dialog'
 
 export const dungeonHouse: Dialog[] = [
   {
@@ -6,7 +6,7 @@ export const dungeonHouse: Dialog[] = [
     entries: [
       {
         id: 'wX3PbrBZIQ0vxxlVebqSj',
-        choice: 'DG-pqnQxlNXl8SmNjjzm1'
+        choice: 'DG-pqnQxlNXl8SmNjjzm1',
       },
     ],
     text: [
@@ -16,9 +16,9 @@ export const dungeonHouse: Dialog[] = [
     options: [
       {
         id: 'W5IH4MDUcEY4wFoeQVLmW',
-        text: '*Take the gun*'
+        text: '*Take the gun*',
       },
-    ]
+    ],
   },
   {
     id: 'sg6bLIgxRjqANfCkFegIS',
@@ -26,7 +26,7 @@ export const dungeonHouse: Dialog[] = [
       {
         id: 'p8jFrwBmwR89yWa3IU-Qk',
         choice: 'W5IH4MDUcEY4wFoeQVLmW',
-      }
+      },
     ],
     text: 'You picked up **.45 Colt**. It has been added to your inventory.',
     inventorySet: {
@@ -35,8 +35,8 @@ export const dungeonHouse: Dialog[] = [
     options: [
       {
         id: 'QPDbTZ9QS7gbBPpVKKWBi',
-        text: 'Leave the house'
-      }
+        text: 'Leave the house',
+      },
     ],
-  }
+  },
 ]

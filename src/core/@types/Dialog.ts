@@ -1,4 +1,4 @@
-import { Inventory } from "./Inventory"
+import { Inventory } from './Inventory'
 import { Option } from './Option'
 
 export interface Dialog {

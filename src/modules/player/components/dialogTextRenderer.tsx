@@ -1,4 +1,4 @@
-import { Component, For } from "solid-js"
+import { Component, For } from 'solid-js'
 
 interface Props {
   text: string | string[]
@@ -11,8 +11,11 @@ export const TextRenderer: Component<{ text: string }> = ({ text }) => (
 export const DialogTextRenderer: Component<Props> = props => {
   const { text } = props
 
-  if (typeof text === 'string')
-    return <TextRenderer text={text} />
+  if (typeof text === 'string') return <TextRenderer text={text} />
   else
-    return <div class="space-y-4"><For each={text}>{text => <TextRenderer text={text} />}</For></div>
+    return (
+      <div class="space-y-4">
+        <For each={text}>{text => <TextRenderer text={text} />}</For>
+      </div>
+    )
 }

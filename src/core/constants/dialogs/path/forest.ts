@@ -1,4 +1,4 @@
-import { Dialog } from "../../../@types/Dialog";
+import { Dialog } from '../../../@types/Dialog'
 
 export const pathForest: Dialog[] = [
   {
@@ -7,7 +7,7 @@ export const pathForest: Dialog[] = [
       {
         id: '0EKdmnij0qj6ZR8ChUSEd',
         choice: 'oHOeWtFhxXYt51aWkwGPy',
-      }
+      },
     ],
     text: [
       'You goes deep into the forest until the night.',
@@ -17,11 +17,11 @@ export const pathForest: Dialog[] = [
     options: [
       {
         id: 'tl6CSRwyfOUkF_6m_ssHb',
-        text: 'Apple'
+        text: 'Apple',
       },
       {
         id: '21w3TRn3Bf_SZPdFvtIvQ',
-        text: 'Ice-cream sandwich'
+        text: 'Ice-cream sandwich',
       },
     ],
   },
@@ -31,13 +31,13 @@ export const pathForest: Dialog[] = [
       {
         id: 'Cqq4KZXrA7cwr8m9G_OFw',
         choice: 'tl6CSRwyfOUkF_6m_ssHb',
-      }
+      },
     ],
     text: [
       'You take a bite of the apple.',
-      'You fell into *Tim Apple* wall garden, and never recovered'
+      'You fell into *Tim Apple* wall garden, and never recovered',
     ],
-    ending: 'B'
+    ending: 'B',
   },
   {
     id: 'IYlekH6rr3-02jcQFcgtG',
@@ -45,7 +45,7 @@ export const pathForest: Dialog[] = [
       {
         id: 'Cqq4KZXrA7cwr8m9G_OFw',
         choice: '21w3TRn3Bf_SZPdFvtIvQ',
-      }
+      },
     ],
     text: [
       'You try to eat ice-cream sandwich, but it already melted.',
@@ -54,8 +54,8 @@ export const pathForest: Dialog[] = [
     options: [
       {
         id: 'c2ztMLvK58cN2j-jcyGUD',
-        text: '*Proceed to follow directions from Tim Apple*'
-      }
-    ]
-  }
+        text: '*Proceed to follow directions from Tim Apple*',
+      },
+    ],
+  },
 ]

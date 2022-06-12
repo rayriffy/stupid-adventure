@@ -1,7 +1,7 @@
-import { Accessor, Component, For } from "solid-js"
+import { Accessor, Component, For } from 'solid-js'
 
-import { HistoryDialog } from "../../../core/@types/HistoryDialog"
-import { DialogTextRenderer } from "./dialogTextRenderer"
+import { HistoryDialog } from '../../../core/@types/HistoryDialog'
+import { DialogTextRenderer } from './dialogTextRenderer'
 
 interface Props {
   historyDialogs: Accessor<HistoryDialog[]>

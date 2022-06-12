@@ -1,4 +1,4 @@
-import { Inventory } from "../../../core/@types/Inventory"
+import { Inventory } from '../../../core/@types/Inventory'
 
 export const setInventory = (itemKey: string, value: boolean): Inventory => {
   let inventory = JSON.parse(localStorage.getItem('inventory') ?? '{}')

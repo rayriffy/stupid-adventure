@@ -28,7 +28,9 @@ export const ActiveDialogRenderer: Component<Props> = props => {
   )
 }
 
-const ActiveDialogContent: Component<Pick<Props, 'dialog' | 'onAllowOption'>> = props => {
+const ActiveDialogContent: Component<
+  Pick<Props, 'dialog' | 'onAllowOption'>
+> = props => {
   const { dialog, onAllowOption = () => {} } = props
 
   const [bubble, setBubble] = createSignal<boolean>(true)
