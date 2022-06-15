@@ -4,11 +4,12 @@ import { omit } from 'lodash'
 
 import { gameData } from '../src/core/constants/gameData'
 import { getMockDialog } from '../src/core/services/getMockDialog'
+import { renderText } from '../src/core/services/renderText'
+import { findAsync } from '../src/core/services/findAsync'
 
 import { Dialog } from '../src/core/@types/Dialog'
 import { Inventory } from '../src/core/@types/Inventory'
 import { SerializedDialog } from '../src/core/@types/SerializedDialog'
-import { renderText } from '../src/core/services/renderText'
 
 export interface TextEngineRequest {
   from: string
@@ -25,23 +26,47 @@ const api: VercelApiHandler = async (req, res) => {
 
   if (req.method === 'POST') {
     // find next dialog
-    const targetDialog = gameData.dialogs.find(dialog => {
+    let contextCache: unknown
+
+    // locate dialog
+    const targetDialog = await findAsync(gameData.dialogs, async dialog => {
       const targetEntries = dialog.entries.find(
         ({ id, choice }) => id === payload.from && choice === payload.choice
       )
 
-      return targetEntries
-        ? targetEntries.condition
-          ? targetEntries.condition(payload.inventory)
-          : true
-        : false
+      // if there's no targetEntries, then reject
+      if (targetEntries === undefined) return false
+      // if there's no condition then accept
+      else if (
+        targetEntries !== undefined &&
+        targetEntries.condition === undefined
+      )
+        return true
+
+      // otherwise, run condition
+      const conditionResult = await targetEntries.condition(payload.inventory)
+
+      if (conditionResult === false) {
+        return false
+      } else {
+        // if conditionResult is true, then set context to cache then proceed
+        contextCache = conditionResult
+        return true
+      }
     })
 
     if (targetDialog) {
+      // if text is a function, then call it with context first
+      const processedDialogText =
+        typeof targetDialog.text === 'function'
+          ? await targetDialog.text(contextCache)
+          : targetDialog.text
+
+      // render text from markdown
       const serializedDialogText =
-        typeof targetDialog.text === 'string'
-          ? await renderText(targetDialog.text)
-          : await Promise.all(targetDialog.text.map(o => renderText(o)))
+        typeof processedDialogText === 'string'
+          ? await renderText(processedDialogText)
+          : await Promise.all(processedDialogText.map(o => renderText(o)))
       const serializedDialogOption =
         targetDialog.options === undefined
           ? undefined
@@ -59,6 +84,7 @@ const api: VercelApiHandler = async (req, res) => {
                 }))
             )
 
+      // final check to serialize everything
       let serializedDialog: SerializedDialog = {
         ...omit(targetDialog, ['entries']),
         text: serializedDialogText,

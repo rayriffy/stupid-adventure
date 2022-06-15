@@ -19,7 +19,7 @@ export const villageEntry: Dialog = {
       choice: 'bcuf-nh6xS3gryBH7RNjE',
     },
     {
-      id: 'VswT8gLLBLO4bV-4-Ukuz',
+      id: 'GJ9eCQ7BSdW-gMAospFlX',
       choice: 'pnw2V3IaePc_-9GMQY-B8',
     },
     // tavern

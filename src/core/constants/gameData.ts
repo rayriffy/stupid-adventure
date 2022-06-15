@@ -14,6 +14,7 @@ import { villageHouse } from './dialogs/village/house'
 
 import { tavernEntrance } from './dialogs/village/tavern/entrance'
 import { tavernInside } from './dialogs/village/tavern/inside'
+import { tavernTicketSubmit } from './dialogs/village/tavern/ticketSubmit'
 
 export const gameData: GameData = {
   game: 'Stupid Adventure',
@@ -34,5 +35,6 @@ export const gameData: GameData = {
     // tavern
     ...tavernEntrance,
     ...tavernInside,
+    tavernTicketSubmit,
   ],
 }

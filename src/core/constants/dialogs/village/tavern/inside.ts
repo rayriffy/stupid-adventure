@@ -1,5 +1,4 @@
 import { Dialog } from '../../../../@types/Dialog'
-import { eventTicketCode } from '../../../eventTicketCode'
 
 export const tavernInside: Dialog[] = [
   // enter tavern without ticket? that's cheating
@@ -90,21 +89,5 @@ export const tavernInside: Dialog[] = [
     ],
     text: "God caught you for stealing ticket! He's not pleased",
     ending: 'F',
-  },
-  {
-    id: 'nFVmrg8NIVDTlLePvUKC_',
-    entries: [
-      {
-        id: 'o6vHejGToMwBUFP1_O0Yg',
-        choice: 'GQ28837dVz5jTZln0HHRZ',
-      },
-    ],
-    text: [
-      'God think your idea is hilarious',
-      '"Here, take the ticket and redeem them before it ran out" said the god',
-      `Enter code \`${eventTicketCode}\` at [Eventpop](https://www.eventpop.me/e/13089)`,
-      'Thanks for playing this stupid game 💖',
-    ],
-    ending: 'K',
   },
 ]

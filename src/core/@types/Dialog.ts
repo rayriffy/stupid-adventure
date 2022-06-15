@@ -1,14 +1,18 @@
 import { Inventory } from './Inventory'
 import { Option } from './Option'
 
-export interface Dialog {
+type Text = string | string[]
+
+export interface Dialog<Context = unknown> {
   id: string
   entries: {
     id: string
     choice: string
-    condition?(inventory: Inventory): boolean
+    condition?(
+      inventory: Inventory
+    ): (boolean | Context) | Promise<boolean | Context>
   }[]
-  text: string | string[]
+  text: Text | ((context: Context) => Text | Promise<Text>)
   options?: Option[]
   ending?: string
   inventorySet?: {
