@@ -1,22 +1,15 @@
-# solid-tailwind
+# Stupid Adventure
 
-Ready-to-develop template for SolidJS
+Mini-adventure game for finding event tickets to [The ៦th Stupid Hackathon Thailand](https://stupidhackth.github.io/6/)
 
-## Features
+## Requirements
 
-- SolidJS dynamic routing
-- Code-splitting
-- Dynamic document `title`
-- Preconfigured Tailwind compatible with Tailwind UI
-- Examples for data fetching, dynamic routing
+- Node 16
+- pnpm 7
 
-## File structure
+## Related projects
 
-- `api`: Backend serverless functions served on Vercel
-- `public`: Public directory to drop static files
-- `src`: Frontned SolidJS part where magic happens
-  - `src/routes.ts`: All routes controlled in here
-- `tools`: Set of utility to help you jump-start your project
+- [Event ticket dispenser](https://github.com/SaltyAom/stupid-hack-dispenser)
 
 ## Vercel configuration
 
