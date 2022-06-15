@@ -55,7 +55,7 @@ const ActiveDialogContent: Component<
     }
 
     await new Promise(res =>
-      setTimeout(res, Math.floor((Math.random() * 100000) % 500))
+      setTimeout(res, Math.floor((Math.random() * 100000) % 500) + 200)
     )
 
     onAllowOption(true)

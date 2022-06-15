@@ -18,7 +18,7 @@ export interface TextEngineRequest {
 }
 
 export interface TextEngineResponse {
-  dialog: Dialog
+  dialog: SerializedDialog
 }
 
 const api: VercelApiHandler = async (req, res) => {
