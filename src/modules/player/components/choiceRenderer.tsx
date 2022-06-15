@@ -45,6 +45,7 @@ export const ChoiceRenderer: Component<Props> = props => {
                     : 'bg-blue-600 hover:bg-blue-700',
                   'inline-flex justify-center items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition'
                 )}
+                disabled={process()}
                 onClick={() => onOption(dialog().id, option)}
                 innerHTML={option.text}
               />
