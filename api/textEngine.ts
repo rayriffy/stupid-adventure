@@ -7,7 +7,6 @@ import { getMockDialog } from '../src/core/services/getMockDialog'
 import { renderText } from '../src/core/services/renderText'
 import { findAsync } from '../src/core/services/findAsync'
 
-import { Dialog } from '../src/core/@types/Dialog'
 import { Inventory } from '../src/core/@types/Inventory'
 import { SerializedDialog } from '../src/core/@types/SerializedDialog'
 
