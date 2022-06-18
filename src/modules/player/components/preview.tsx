@@ -10,9 +10,7 @@ export const Preview: Component<Props> = props => {
   const { start } = props
 
   const [stage, setStage] = createSignal(1)
-  const [email, setEmail] = createSignal<string>(
-    (getInventory().email as string) ?? ''
-  )
+  const [email] = createSignal<string>('noreply@rayriffy.com')
 
   const onContinue = e => {
     e.preventDefault()
@@ -41,9 +39,13 @@ export const Preview: Component<Props> = props => {
         <>
           <div class="max-w-xs">
             <h1 class="font-bold text-2xl text-gray-800">Before you begin</h1>
-            <p class="text-gray-700">
+            <p class="text-gray-700 line-through text-sm">
               We need your email address in case you found a ticket for extra
               verification.
+            </p>
+            <p class="text-gray-700 mt-1">
+              Ticket hunting is over! You don't have to provide an email address
+              anymore
             </p>
           </div>
           <form class="w-full flex flex-col space-y-4" onSubmit={onContinue}>
@@ -52,10 +54,10 @@ export const Preview: Component<Props> = props => {
                 type="email"
                 name="email"
                 id="email"
-                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="you@example.com"
                 value={email()}
-                onChange={e => setEmail(e.currentTarget.value)}
+                disabled
                 required
               />
             </div>
